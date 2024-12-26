@@ -1,0 +1,145 @@
+/* พื้นหลังแบบ Gradient ที่เปลี่ยนแปลง */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff007f, #6a11cb, #2575fc);
+  background-size: 300% 300%;
+  animation: gradientBG 6s ease infinite;
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* กล่องฟอร์มลงทะเบียน */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  color: #fff;
+  animation: popUp 0.8s ease-out;
+}
+
+/* แอนิเมชันการปรากฏตัวของฟอร์ม */
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* หัวข้อฟอร์ม */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* ช่องกรอกข้อมูล */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  background: linear-gradient(45deg, #ff007f, #2575fc);
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.7);
+  transform: scale(1.05);
+}
+
+/* ข้อความข้อผิดพลาด */
+.error-message {
+  color: #ff007f;
+  font-weight: bold;
+  margin-top: 15px;
+  animation: fadeInError 1s ease-out;
+}
+
+@keyframes fadeInError {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ปุ่มลงทะเบียน */
+button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  border: none;
+  background: linear-gradient(45deg, #ff007f, #2575fc);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(45deg, #ff61a6, #2575fc);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/* ลิงค์ไปยังหน้าเข้าสู่ระบบ */
+p {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff007f;
+}

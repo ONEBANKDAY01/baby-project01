@@ -1,0 +1,134 @@
+/* General page styling */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease-out;
+  transition: all 0.3s ease;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #2980b9; /* Soft blue background for modern feel */
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  transition: all 0.3s ease;
+}
+
+.navbar a {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-transform: capitalize; /* Avoid uppercase for easier readability */
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 25px;
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+  color: #2980b9 !important;
+  background-color: #ecf0f1 !important;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+/* Active link styling */
+.nav-item.active .nav-link {
+  color: #2980b9 !important;
+  background-color: #ecf0f1 !important;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+/* Adjust spacing between navbar items */
+.navbar-nav li {
+  margin-right: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar a {
+    font-size: 18px; /* Slightly larger font size for mobile */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #2980b9;
+  }
+}
+
+/* Button hover effect */
+button,
+.btn {
+  transition: background-color 0.3s, color 0.3s;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded buttons for a more friendly feel */
+  font-size: 16px;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make buttons more prominent */
+button,
+.btn {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+}
+
+/* Focus states for accessibility */
+.navbar a:focus,
+button:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.5); /* Focus state to make buttons more accessible */
+}
+
+/* Smooth page transitions */
+.page-transition {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.page-transition.hidden {
+  opacity: 0;
+}
+
+/* Dropdown menu (if applicable) */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px); /* Slight dropdown effect */
+}
